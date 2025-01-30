@@ -1,11 +1,14 @@
 program PunterosEj3;
 type
     { Declara un tipo de registro llamado “nodo” con dos campos: un entero y un puntero a “nodo” }
-
+        nodo: RECORD
+            entero: integer;
+            puntero: ^nodo;
+        end;
 
 var
     { Declara una variable de tipo puntero a nodo }
-
+        varnodo: ^nodo;
 begin
     { Crea un nodo en memoria dinámica (heap) }
 
