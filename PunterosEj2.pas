@@ -32,7 +32,7 @@ begin
     { Recorre con p todas las posiciones del array para ponerlas todas a cero }
         for i:= 0 to 2 do
             begin
-                p^:=100;
+                p^:=0;
                 Inc(p);
             end;
 
