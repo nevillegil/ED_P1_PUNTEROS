@@ -1,7 +1,7 @@
 program PunterosEj3;
 type
     { Declara un tipo de registro llamado “nodo” con dos campos: un entero y un puntero a “nodo” }
-        nodo: RECORD
+        nodo = RECORD
             entero: integer;
             puntero: ^nodo;
         end;
