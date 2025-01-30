@@ -15,7 +15,7 @@ begin
  
     { Muestra sus valores por pantalla }
     writeln('Valor iniciales del array:');
-        for ind:= 0 to 2 do
+        for i:= 0 to 2 do
             writeln('V[', i, '] = ', V[i]);
             
     { Declara un puntero a entero p y ponlo a apuntar a la primera posición del array }
