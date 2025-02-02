@@ -10,16 +10,30 @@ const
 { Declaración de tipos }
 type
     { 1. Declara un tipo coordenada_3D para puntos con coordenadas x,y,z }
-
+   coordenada_3D = record
+        x, y, z: Integer;
+    end;
+    ptr_coordenada = ^coordenada_3D;
 
 { Declaración de variables }
 var
     { 2. Declara un array de MAX punteros a coordenadas_3D }
+    coordenadas: array[0..MAX-1] of ptr_coordenada;
 
-
-{ 3. Crea una coordenada_3D en cada una de las posiciones inicializado 
-    todas las coordenadas con números aleatorios }
-
+{ 3. Crea una coordenada_3D en cada una de las posiciones inicializado todas las coordenadas con números aleatorios }
+procedure InicializarCoordenadas;
+var
+    i: Integer;
+begin
+    Randomize;
+    for i := 0 to MAX-1 do
+    begin
+        New(coordenadas[i]);
+        coordenadas[i]^.x := Random(100);
+        coordenadas[i]^.y := Random(100);
+        coordenadas[i]^.z := Random(100);
+    end;
+end;
 
 { Procedimiento para imprimir una coordenada_3D }
 
